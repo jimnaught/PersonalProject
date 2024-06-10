@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- Site CSS -->
+      <link rel="stylesheet" href="{% static 'addition/style.css' %}">
+      <!-- Responsive CSS -->
+      <link rel="stylesheet" href="{% static 'addition/css/responsive.css' %}">
+      <!-- Custom CSS -->
+      <link rel="stylesheet" href="{% static 'addition/css/custom.css' %}">
+	   <script src="{% static 'addition/js/modernizr.js' %}"></script> <!-- Modernizr -->     
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+      <!-- body -->
+   <body>    
+{% block nice %}
+{% endblock %}
+   <script src="{% static 'addition/js/all.js' %}"></script>
+	<!-- Camera Slider -->
+	<script src="{% static 'addition/js/jquery.mobile.customized.min.js' %}"></script>
+	<script src="{% static 'addition/js/jquery.easing.1.3.js' %}"></script> 
+	<script src="{% static 'addition/js/parallaxie.js' %}"></script>
+	<script src="{% static 'addition/js/headline.js' %}"></script>
+	<!-- Contact form JavaScript -->
+    <script src="{% static 'addition/js/jqBootstrapValidation.js' %}"></script>
+    <script src="{% static 'addition/js/contact_me.js' %}"></script>
+    <!-- ALL PLUGINS -->
+    <script src="{% static 'addition/js/custom.js' %}"></script>
+    <script src="{% static 'addition/js/jquery.vide.js' %}"></script>
+   </body>
+</html>

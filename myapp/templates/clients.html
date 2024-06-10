@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- clients -->
+<div class="clients" style="margin-bottom: 90px;">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-6 offset-md-3">
+            <div class="titlepage">
+               <h2>What our clients Say</h2>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-12">
+            <div class="clients_box">
+               <p>As a rapidly growing startup, we needed a digital partner that could keep up with our evolving needs.
+                  CreativeTech has exceeded all of our expectations, delivering custom web solutions, insightful
+                  marketing analysis, and eye-catching brand assets that have been crucial to our success. Their team's
+                  technical prowess and creative problem-solving skills make them a true asset to our business.</p>
+            </div>
+            <div class="jonu">
+               <img style="border-radius: 50% 50% 50% 50%; width: 30%; height: 30%;"
+                  src="{% static 'images/client3.avif' %}" alt="#" />
+               <h3>Simba Kakora</h3>
+               <a class="read_more" href="{% url 'myapp:contact' %}">Get Quotation</a>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="container">
+   <div class="titlepage">
+      <h2>Some of our clients</h2>
+      <hr>
+   </div>
+   <div class="row">
+      <hr>
+      <div class="col-3">
+
+         <img style="width: 90%; height: 90%;" src="{% static 'images/client1.jpg' %}" alt="brand-image" />
+      </div>
+      <div class="col-3">
+         <img style="width: 90%; height: 90%;" src="{% static 'images/client2.png' %}" alt="brand-image" />
+      </div>
+      <hr>
+   </div>
+</div>
+<div class="container">
+   <hr>
+   <p></p>
+</div>
+<!-- end clients -->
+
+{% endblock %}

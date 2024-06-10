@@ -1,0 +1,203 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+   .anim {
+      width: 100%;
+      height: 20vh;
+      background-color: white;
+      display: flex;
+      /* border: dotted #232176 1px; */
+      justify-content: center;
+      align-items: center;
+   }
+
+   .spn {
+      color: #00c1c1;
+      display: inline;
+      text-decoration: underline;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 52px;
+      transform: rotate(360deg);
+      animation: animate 5s linear infinite;
+
+   }
+
+   @keyframes animate {
+      0% {
+         transform: rotateY(0deg) scale(0);
+      }
+
+      50% {
+         transform: rotateX(0deg) scale(1);
+      }
+
+      100% {
+         transform: rotate(0deg) scale(0);
+      }
+   }
+</style>
+
+<div class="ourwork">
+   <div class="container">
+      <div class="row">
+
+         <div class="col-12">
+            <div class="anim" style="background:ghostwhite">
+               <span class="spn">c</span>
+               <span class="spn">r</span>
+               <span class="spn">e</span>
+               <span class="spn">a</span>
+               <span class="spn">t</span>
+               <span class="spn">i</span>
+               <span class="spn">v</span>
+               <span class="spn">e</span>
+               <span class="spn">t</span>
+               <span class="spn">e</span>
+               <span class="spn">c</span>
+               <span class="spn">h</span>
+ 
+            </div>
+         </div>
+
+      </div>
+
+      <!-- <div class="row">
+         <div class="col-md-12">
+            <div class="titlepage">
+               <h2>Our Work</h2>
+            </div>
+         </div>
+      </div> -->
+      <!-- <div class="row">
+         <div class="col-md-4">
+            <div class="our_box">
+               <figure><img src="{% static 'images/our.jpg' %}" alt="#" /></figure>
+            </div>
+         </div>
+         <div class="col-md-4">
+            <div class="our_box">
+               <figure><img src="{% static 'images/our1.jpg' %}" alt="#" /></figure>
+            </div>
+         </div>
+         <div class="col-md-4">
+            <div class="our_box">
+               <figure><img src="{% static 'images/our.jpg' %}" alt="#" /></figure>
+            </div>
+         </div>
+         <div class="col-md-4">
+            <div class="our_box">
+               <figure><img src="{% static 'images/our1.jpg' %}" alt="#" /></figure>
+            </div>
+         </div>
+         <div class="col-md-4">
+            <div class="our_box">
+               <figure><img src="{% static 'images/our.jpg' %}" alt="#" /></figure>
+            </div>
+         </div>
+         <div class="col-md-4">
+            <div class="our_box">
+               <figure><img src="{% static 'images/our1.jpg' %}" alt="#" /></figure>
+            </div>
+         </div>
+      </div> -->
+   </div>
+</div>
+
+<div id="services" class="section lb">
+   <div class="container">
+      <div class="section-title text-center">
+         <h2 style="color: black; font-weight: bolder;">Services</h2>
+         <p style="color: black;">Elevate your online presence and drive business growth with our comprehensive suite of digital
+            services.
+            From web development to graphic design, our team of experts deliver top-quality solutions tailored to
+            your
+            unique needs.</p>
+      </div><!-- end title -->
+
+      <div class="row">
+         <div class="col-md-4">
+            <div class="services-inner-box">
+               <div class="ser-icon">
+                  <i class="flaticon-seo"></i>
+               </div>
+               <h2>Web Development</h2>
+               <p>Unlock the full potential of your online presence with our expert web development services. Our
+                  team
+                  of skilled engineers will build a visually stunning, highly functional website that captivates
+                  your
+                  audience and drives results.</p>
+            </div>
+         </div><!-- end col -->
+         <div class="col-md-4">
+            <div class="services-inner-box">
+               <div class="ser-icon">
+                  <i class="flaticon-development"></i>
+               </div>
+               <h2>Markertin Analysis</h2>
+               <p>Effective marketing requires a deep understanding of your audience and the competitive
+                  landscape. Our
+                  marketing analysis services provide you with the insights you need to develop targeted,
+                  impactful
+                  campaigns that drive real results</p>
+            </div>
+         </div><!-- end col -->
+         <div class="col-md-4">
+            <div class="services-inner-box">
+               <div class="ser-icon">
+                  <i class="flaticon-process"></i>
+               </div>
+               <h2>Logo Design</h2>
+               <p>Your logo is the face of your brand, the first thing your customers see and remember. Our
+                  talented
+                  graphic designers will work closely with you to create a unique, memorable logo that captures
+                  the
+                  essence of your business and leaves a lasting impression on your target audience</p>
+            </div>
+         </div><!-- end col -->
+         <div class="col-md-4">
+            <div class="services-inner-box">
+               <div class="ser-icon">
+                  <i class="flaticon-discuss-issue"></i>
+               </div>
+               <h2>Technical Support</h2>
+               <p>Reliable, responsive technical support is the backbone of any successful online business. Our
+                  team of
+                  knowledgeable, dedicated technicians will be on hand to address your technical needs, ensuring
+                  your
+                  website and systems are running smoothly at all times.</p>
+            </div>
+         </div><!-- end col -->
+         <div class="col-md-4">
+            <div class="services-inner-box">
+               <div class="ser-icon">
+                  <i class="flaticon-idea"></i>
+               </div>
+               <h2>Data Analysis</h2>
+               <p>Data is the lifeblood of modern business, but making sense of it all can be a daunting task. Our
+                  data
+                  analysis experts will dive deep into your metrics, uncover valuable insights, and deliver
+                  actionable
+                  strategies to help you make informed, data-driven decisions.</p>
+            </div>
+         </div><!-- end col -->
+         <div class="col-md-4">
+            <div class="services-inner-box">
+               <div class="ser-icon">
+                  <i class="flaticon-idea-1"></i>
+               </div>
+               <h2>Graphic Design</h2>
+               <p>Elevate your brand's visual identity with our expert graphic design services. From eye-catching
+                  logos
+                  to compelling marketing materials, our designers will help you craft a visual brand that stands
+                  out in
+                  a crowded marketplace..</p>
+            </div>
+         </div><!-- end col -->
+      </div><!-- end row -->
+   </div><!-- end container -->
+</div><!-- end section -->
+
+{% endblock %}

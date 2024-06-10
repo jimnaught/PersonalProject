@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<!-- about -->
+<div id="about" class="about">
+   <div class="container">
+      <div class="row d_flex">
+         <div class="col-md-7">
+            <div class="titlepage">
+               <h2>About Us</h2>
+               <span></span>
+               <p>We are a full-service digital agency dedicated to helping businesses of all sizes elevate their online
+                  presence and achieve their goals. With expertise spanning web development, web design, data analysis,
+                  marketing analysis, technical support, UX/UI design, and graphic design, our team of talented
+                  professionals is equipped to handle any digital challenge you may face. </p>
+
+               <div  id="textbox">
+                  <p>At our core, we are problem-solvers, driven by a passion for creating innovative, user-centric
+                     solutions that drive real results. We take the time to understand your unique business needs,
+                     goals, and target audience, and then leverage our cross-functional capabilities to deliver
+                     customized strategies and services that set you apart from the competition.</p>
+                  <p>Whether you're looking to build a cutting-edge website, develop a dynamic mobile app, or optimize
+                     your marketing efforts through data-driven insights, we have the skills and expertise to turn your
+                     digital vision into a reality. Trust us to be your reliable partner in navigating the ever-evolving
+                     digital landscape and reaching new heights of success</p>
+                                    
+                  </div>
+               <a id="slide" class="read_more" style="cursor: pointer;" > Read More or Less</a>
+            </div>
+         </div>
+         <div class="col-md-5">
+            <div class="about_img">
+               <figure><img style="border-radius: 50px 50px 0px 50px;" src="{% static 'images/about.jpg' %}" alt="#" /></figure>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- end about -->
+
+
+{% endblock %}
