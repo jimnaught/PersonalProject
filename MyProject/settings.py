@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
+import dj_database_url
 from pathlib import Path
 import os
 
@@ -21,12 +22,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-j^q!*w2il6n^=jg2ngo+zd-8g==n93+sxba$haa4x3=k$vnxt4'
+# SECRET_KEY = 'django-insecure-j^q!*w2il6n^=jg2ngo+zd-8g==n93+sxba$haa4x3=k$vnxt4'
+
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
 
 
 # Application definition
@@ -77,23 +80,28 @@ WSGI_APPLICATION = 'MyProject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'YDvGaSmpptKhjkKboJbNadQXTsuEfZdo',
-        'HOST': 'monorail.proxy.rlwy.net',
-        'PORT': '57727',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'railway',
+#         'USER': 'postgres',
+#         'PASSWORD': 'YDvGaSmpptKhjkKboJbNadQXTsuEfZdo',
+#         'HOST': 'monorail.proxy.rlwy.net',
+#         'PORT': '57727',
+#     }
+# }
 
+database_url = os.environ.get('DATABASE_URL')
+DATABASES['default'] = dj_database_url.parse(database_url)
+# DATABASES['default'] = dj_database_url.parse('postgres://personal_4vjm_user:yDICjWeWxvwi74SyYhBd2ACgLwFg5wqM@dpg-cpk4vco21fec73a84rng-a.oregon-postgres.render.com/personal_4vjm')
+
+#postgres://personal_4vjm_user:yDICjWeWxvwi74SyYhBd2ACgLwFg5wqM@dpg-cpk4vco21fec73a84rng-a.oregon-postgres.render.com/personal_4vjm
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
